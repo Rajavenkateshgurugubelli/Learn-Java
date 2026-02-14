@@ -1,4 +1,4 @@
-package fundamentals;
+// package fundamentals; // Commented out for easier compilation
 
 import java.util.Scanner;
 
@@ -15,11 +15,11 @@ import java.util.Scanner;
 public class ControlFlow {
 
     public static void main(String[] args) {
-        
+
         // --- 1. If-Else ---
         int score = 85;
         char grade;
-        
+
         if (score >= 90) {
             grade = 'A';
         } else if (score >= 80) {
@@ -30,7 +30,7 @@ public class ControlFlow {
             grade = 'F';
         }
         System.out.println("Score: " + score + ", Grade: " + grade);
-        
+
         // --- 2. Switch (Classic vs Modern) ---
         // Classic Switch
         String day = "Monday";
@@ -44,7 +44,7 @@ public class ControlFlow {
             default:
                 System.out.println("Mid-week blues.");
         }
-        
+
         // Modern Switch Expression (Java 12+) - returns a value, no break needed!
         String typeOfDay = switch (day) {
             case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> "Weekday";
@@ -54,16 +54,16 @@ public class ControlFlow {
         System.out.println(day + " is a " + typeOfDay);
 
         // --- 3. Loops ---
-        
+
         // For Loop (Output: 1 2 3 4 5)
         System.out.print("For Loop: ");
         for (int i = 1; i <= 5; i++) {
             System.out.print(i + " ");
         }
         System.out.println();
-        
+
         // Enhanced For-Loop (For-Each) - Great for Arrays/Collections
-        int[] numbers = {10, 20, 30};
+        int[] numbers = { 10, 20, 30 };
         System.out.print("For-Each: ");
         for (int num : numbers) {
             System.out.print(num + " ");
@@ -78,7 +78,7 @@ public class ControlFlow {
             count++;
         }
         System.out.println();
-        
+
         // Do-While Loop (Execute once, then check condition)
         // Guaranteed to run at least once.
         int doCount = 0;
@@ -88,5 +88,12 @@ public class ControlFlow {
             doCount++;
         } while (doCount < 0); // Condition is false, but ran once!
         System.out.println();
+
+        // --- 🧠 TRY IT YOURSELF ---
+        // 1. Create an int variable 'temperature'.
+        // - If temp > 30, print "Hot".
+        // - If temp < 10, print "Cold".
+        // - Else, print "Mild".
+        // 2. Write a for-loop that prints all even numbers from 0 to 20.
     }
 }
